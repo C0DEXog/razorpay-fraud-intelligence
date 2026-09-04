@@ -1,11 +1,11 @@
-# Razorpay Real-Time Risk & Fraud Intelligence System 🛡️⚡
+Razorpay Real-Time Risk & Fraud Intelligence System 
 
 > **Sub-25ms Explainable Machine Learning Engine for Transaction Anomaly Detection & Chargeback Prevention**  
 > *Built with LightGBM, Random Forest Ensemble, TreeSHAP, and Direct Razorpay REST API Integration.*
 
 ---
 
-## 📌 Executive Summary
+## Executive Summary
 
 Digital payment gateways like Razorpay process millions of transactions daily across UPI, Cards, and Net Banking. In high-velocity payment ecosystems, traditional rule engines produce high false-decline rates (>15%), directly hurting merchant Gross Merchandise Value (GMV), while opaque deep neural networks fail regulatory auditability requirements.
 
@@ -18,7 +18,7 @@ This project delivers an **end-to-end, production-ready, and explainable risk in
 
 ---
 
-## 🏗️ Architecture & Data Flow
+## Architecture & Data Flow
 
 ```
 +-------------------------------------------------------------------------+
@@ -51,7 +51,7 @@ This project delivers an **end-to-end, production-ready, and explainable risk in
 
 ---
 
-## 📊 Key Evaluation Metrics (Imbalanced Fraud Data)
+## Key Evaluation Metrics (Imbalanced Fraud Data)
 
 | Metric | Benchmark Score | Why It Matters |
 |---|---|---|
@@ -62,7 +62,7 @@ This project delivers an **end-to-end, production-ready, and explainable risk in
 
 ---
 
-## 🚀 Quick Start Guide
+## Quick Start Guide
 
 ### 1. Clone & Setup Virtual Environment
 ```bash
@@ -104,16 +104,16 @@ Open **`http://localhost:8501`** in your browser.
 
 ---
 
-## 🧭 Dashboard Capabilities
+## Dashboard Capabilities
 
-- **🔄 One-Click Live Sync**: Sidebar button instantly queries Razorpay API, recalculates features, retrains the models, and updates visualizations.
-- **🎛️ Dynamic Escalation Slider**: Allows risk compliance managers to adjust sensitivity ($0.0 \to 1.0$) according to daily team capacity.
-- **📈 Real-Time SHAP Waterfall**: Unpacks individual transaction risk scores into mathematical feature contributions ($+/-$ points).
-- **🏪 Merchant Risk Tab**: Highlights seller accounts showing abnormal chargeback and anomaly clusters.
+- ** One-Click Live Sync**: Sidebar button instantly queries Razorpay API, recalculates features, retrains the models, and updates visualizations.
+- ** Dynamic Escalation Slider**: Allows risk compliance managers to adjust sensitivity ($0.0 \to 1.0$) according to daily team capacity.
+- ** Real-Time SHAP Waterfall**: Unpacks individual transaction risk scores into mathematical feature contributions ($+/-$ points).
+- ** Merchant Risk Tab**: Highlights seller accounts showing abnormal chargeback and anomaly clusters.
 
 ---
 
-## 📁 Repository Structure
+##  Repository Structure
 
 ```
 razorpay-risk/
@@ -143,5 +143,5 @@ razorpay-risk/
 
 ---
 
-## 📄 License & Attribution
+##  License & Attribution
 Developed for Razorpay Technical Review & Hackathon Demonstration by **Tanuj Khanna** (MSIT EEE).
