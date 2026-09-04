@@ -66,8 +66,8 @@ This project delivers an **end-to-end, production-ready, and explainable risk in
 
 ### 1. Clone & Setup Virtual Environment
 ```bash
-git clone https://github.com/<your-username>/razorpay-risk.git
-cd razorpay-risk
+git clone https://github.com/C0DEXog/razorpay-fraud-intelligence.git
+cd razorpay-fraud-intelligence
 
 python3 -m venv .venv
 source .venv/bin/activate
@@ -136,9 +136,6 @@ razorpay-risk/
 │   ├── rf_model.pkl               # Random Forest serialized model
 │   ├── metrics.json               # Evaluation metrics
 │   └── shap_values.npy            # Precomputed TreeSHAP attributions
-├── VIDEO_RECORDING_SCRIPT.txt     # Complete 5-7 min video demo script
-├── EXPLAINED_LIKE_A_KID.txt       # Beginner-friendly technical guide
-├── PPT_PROMPT_NOTEBOOKLM.txt      # 13-slide AI presentation generator prompt
 ├── requirements.txt               # Python package dependencies
 ├── .env.example                   # Template for API credentials
 └── README.md                      # Project documentation
