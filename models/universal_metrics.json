@@ -1,0 +1,8 @@
+{
+  "pr_auc": 0.7646,
+  "auc": 0.9419,
+  "precision_at_k": 0.48,
+  "recall_at_k": 0.7619,
+  "total_fraud": 126,
+  "total_rows": 2512
+}

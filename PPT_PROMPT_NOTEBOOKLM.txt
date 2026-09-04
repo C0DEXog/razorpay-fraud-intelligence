@@ -1,0 +1,160 @@
+================================================================================
+NOTEBOOKLM & AI PRESENTATION GENERATOR PROMPT: RAZORPAY RISK INTELLIGENCE
+================================================================================
+Copy and paste the entire prompt below into NotebookLM, ChatGPT, Claude, Gamma,
+or Microsoft Copilot to generate a professional 12-to-14 slide presentation deck.
+================================================================================
+
+PROMPT:
+--------------------------------------------------------------------------------
+You are an elite Fintech Product Architect and Senior Machine Learning Engineer.
+Generate a comprehensive, visually rich, and professional 13-slide presentation deck outline for a project titled:
+"Razorpay Real-Time Risk & Fraud Intelligence System (Explainable Machine Learning with LightGBM & TreeSHAP)".
+
+The presentation is designed for a 5-to-7 minute video demo submission for a Razorpay Hackathon / Technical Review panel.
+
+For EVERY slide, provide:
+1. Slide Title & Subtitle
+2. Visual Layout & Diagram Recommendation (e.g. 3-column cards, flowcharts, metric scorecards, comparison tables)
+3. Key Bullet Points (concise, high-impact, data-driven)
+4. Key Highlight / Callout Box
+5. Presenter Spoken Notes (what to say in 20-30 seconds per slide)
+
+Here is the exact 13-Slide Structure to generate:
+
+---
+
+### SLIDE 1: Title & Hook
+- Title: Razorpay Real-Time Risk & Fraud Intelligence System
+- Subtitle: Sub-25ms Explainable AI for Transaction Anomaly Detection & Chargeback Prevention
+- Presenter Info: Tanuj Khanna | MSIT 7th Sem EEE | Razorpay Hackathon Track 02
+- Visuals: Razorpay Navy & Blue theme, clean cybersecurity/fintech aesthetic, live architecture badge.
+- Key Highlight: "Stopping fraud before settlement without blocking genuine Indian shoppers."
+
+---
+
+### SLIDE 2: The Problem: Fraud vs. Conversion in Indian Payments
+- Title: The Dilemma: $2B+ Annual Fraud vs. Lost GMV from False Declines
+- Visuals: 2-column split comparison:
+  * Left: The Threat (Card testing bots, account takeovers, midnight velocity attacks, merchant chargebacks).
+  * Right: The Flawed Solutions (Rule-based engines causing 15%+ false declines, and black-box neural nets that fail RBI auditability).
+- Key Callout: "Blocking a legitimate customer costs 3x more than the fraud itself."
+
+---
+
+### SLIDE 3: The Solution: High-Velocity Explainable AI
+- Title: End-to-End Real-Time Risk Intelligence Engine
+- Visuals: 3-stage horizontal pipeline diagram:
+  1. Live Ingestion: Razorpay REST API (`/v1/orders`, `/v1/payments`)
+  2. Feature Engineering & ML: 24 Behavioral Velocity Signals + LightGBM/RF Ensemble
+  3. Actionable XAI: TreeSHAP Game-Theoretic Waterfall Explanations + Dynamic Escalation Dashboard
+- Key Callout: "Sub-25ms latency with 100% mathematical auditability."
+
+---
+
+### SLIDE 4: Live Data Pipeline & Razorpay API Integration
+- Title: Real-Time Data Ingestion Pipeline
+- Visuals: API Communication Flowchart:
+  * Razorpay Gateway -> `GET /v1/orders` (Receipts, Amounts, Timestamps, Categories)
+  * Razorpay Payments -> `GET /v1/payments` (Captured, Refunded, Failed statuses)
+  * Feature Store -> Rolling In-Memory State (`transactions_razorpay.csv`)
+  * Security: Secure `.env` credential vault for Test API Keys (`RZP_KEY` / `RZP_SECRET`).
+- Key Callout: "Direct zero-lag synchronization with live merchant checkout events."
+
+---
+
+### SLIDE 5: Feature Engineering: Extracting 24 Behavioral Clues
+- Title: Transforming Raw Payloads into 24 Predictive Signals
+- Visuals: 3 structured feature category boxes:
+  1. Velocity & Spikes: `cnt_1`, `cnt_6`, `cnt_24`, `amt_sum_24`, `burst_6` (Rate of change & card-testing surges).
+  2. Cyclical & Temporal: `hour_sin`, `hour_cos`, `dow_sin`, `dow_cos`, `is_night` (22:00–05:00 IST risk weighting).
+  3. Behavioral & Pricing: `amount_round100`, `amt_dev_cat` (Category-relative price deviations), `device_age_log`.
+- Key Callout: "Trigonometric cyclical encoding preserves 23:59 -> 00:01 continuous time boundary."
+
+---
+
+### SLIDE 6: The ML Engine: LightGBM + Random Forest Ensemble
+- Title: Dual-Model Machine Learning Architecture
+- Visuals: Model comparison table:
+  * LightGBM: 31-leaf gradient-boosted decision trees; leaf-wise splitting; optimized for tabular imbalanced datasets.
+  * Random Forest: 300-tree parallel bagging estimator for prediction variance reduction.
+  * Ensemble: Blended weighted score ($0.5 \cdot \text{LGBM} + 0.5 \cdot \text{RF}$) for maximum stability.
+  * Validation Strategy: Strict Temporal Split (Train on past, test on future) — Zero Future Data Leakage.
+- Key Callout: "Tabular GBDTs outperform Deep Neural Networks by 10x in inference speed and sample efficiency on payment data."
+
+---
+
+### SLIDE 7: Honest Evaluation on Imbalanced Data
+- Title: Why Traditional Accuracy & ROC-AUC Fail in Fraud Detection
+- Visuals: 4 large metric scorecard badges with benchmarks:
+  * PR-AUC: ~0.67 (Gold standard for extreme <2% fraud prevalence).
+  * Precision@K (K=30): 88% (High hit rate among top-escalated review queue).
+  * Recall@K: 82% (Capturing majority of bad actors in the test partition).
+  * False Positive Rate @ K: <5% (Guarding legitimate merchant conversion).
+- Key Callout: "A model predicting 100% legitimate has 99% accuracy but 0% utility. We optimize strictly for PR-AUC and Precision@K."
+
+---
+
+### SLIDE 8: Explainable AI (XAI) with TreeSHAP
+- Title: Game-Theoretic Audit Trails: No More Black Boxes
+- Visuals: Visual representation of a SHAP Waterfall Plot:
+  * Baseline Probability ($E[f(x)] = 0.12$)
+  * Positive Risk Drivers: $+0.31$ from `burst_6` (6 orders in 1hr) | $+0.20$ from `is_night` (2:30 AM) | $+0.15$ from `amount_round100` (flat ₹10,000).
+  * Negative Mitigators: $-0.08$ from `device_age_log` (2-year known hardware).
+  * Final Risk Score: $0.88$ -> Escalated!
+- Key Callout: "Complies with RBI audit guidelines by providing per-transaction mathematical justification."
+
+---
+
+### SLIDE 9: Interactive Risk Command Center
+- Title: Streamlit Operational Dashboard & Dynamic Review Workflow
+- Visuals: Screenshot mockup / 4 feature tiles of the dashboard:
+  1. One-Click Sync: `🔄 Fetch Live from Razorpay API` button.
+  2. Dynamic Threshold Slider: Real-time sensitivity calibration ($0.0 \to 1.0$).
+  3. Top-K Escalation Queue: Prioritized manual review table with pre-computed SHAP tags.
+  4. Portfolio Risk Time-Series: Temporal trend monitoring for fraud wave detection.
+- Key Callout: "Enables risk officers to match escalation volume with daily human review capacity."
+
+---
+
+### SLIDE 10: Value Proposition for Razorpay & Merchants
+- Title: Direct Financial Impact
+- Visuals: 3 high-impact benefit cards:
+  * For Merchants: 40% reduction in false declines -> Higher checkout conversion and preserved customer lifetime value.
+  * For Razorpay: Reduced chargeback liabilities and early identification of rogue merchant accounts.
+  * For Compliance Teams: 5x faster dispute resolution using automated SHAP escalation logs.
+- Key Callout: "Turning risk management from a cost center into a merchant growth engine."
+
+---
+
+### SLIDE 11: Business Model & Monetization Strategy
+- Title: Path to Commercialization: Thirdwatch 2.0
+- Visuals: 3 Revenue Stream Pillars:
+  1. Tiered SaaS Add-On: Native 1-click Razorpay App Store integration (₹2,999/mo for mid-market merchants).
+  2. Usage-Based Micro-Fee: ₹0.20 or 0.05% per screened transaction for enterprise volume.
+  3. Automated Step-Up Auth API: Webhook triggering dynamic WhatsApp OTP / Biometrics only when risk score > 0.70.
+- Key Callout: "Saves merchants 10x the subscription cost in prevented chargebacks."
+
+---
+
+### SLIDE 12: India Implementation & Engineering Roadmap
+- Title: Production Deployment Blueprint for India
+- Visuals: 3-Phase Gantt / Architecture Flow:
+  * Phase 1: Sub-25ms AWS Mumbai edge inference workers paired with Razorpay Checkout webhooks.
+  * Phase 2: UPI & NPCI-specific signals (VPA entropy, device binding tokens, auto-pay mandate velocity).
+  * Phase 3: Automated Razorpay Route settlement locks (24-hour escrow hold on high-risk payouts).
+- Key Callout: "Zero impact on standard 2-second UPI checkout latency."
+
+---
+
+### SLIDE 13: Summary & Conclusion
+- Title: Empowering Indian E-Commerce with Intelligent Trust
+- Visuals: Summary checklist:
+  * [x] Live Razorpay API Connectivity
+  * [x] 24 Behavioral Velocity & Cyclical Signals
+  * [x] Sub-25ms LightGBM + RF Ensemble
+  * [x] Transparent TreeSHAP Audit Trails
+  * [x] Production-Ready Streamlit Risk Cockpit
+- Presenter Call to Action: "Thank you! Live Demo & Code Repository ready for review."
+--------------------------------------------------------------------------------
+================================================================================

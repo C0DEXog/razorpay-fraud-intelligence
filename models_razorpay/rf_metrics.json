@@ -1,0 +1,7 @@
+{
+  "pr_auc": 0.9468,
+  "precision_at_k": 0.0687,
+  "recall_at_k": 1.0,
+  "precision_at_k_5pct": 0.8333,
+  "fp_rate_at_k": 0.9313
+}
